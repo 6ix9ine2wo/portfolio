@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - BCA Graduate 2025</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s, transform 1s;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: #4CAF50;
+            margin: 10px auto;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .highlight {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .skill {
+            background: #333;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #4CAF50;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-content {
+            width: 45%;
+            padding: 15px;
+            background: #111;
+            border-radius: 5px;
+            position: relative;
+        }
+        .timeline-item:nth-child(odd) .timeline-content {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            left: 55%;
+        }
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -10px;
+            border-left: 10px solid #111;
+        }
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -10px;
+            border-right: 10px solid #111;
+        }
+        .timeline-date {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #4CAF50;
+            color: #000;
+            font-weight: bold;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="floating">About Me</h1>
+        
+        <p>Hello! I'm a <span class="highlight">BCA graduate (2025)</span> with a strong foundation in multiple technical domains.</p>
+        
+        <p>Through my college journey, I've developed expertise in:</p>
+        
+        <div class="skills">
+            <div class="skill">Front-end Development</div>
+            <div class="skill">Data Analysis</div>
+            <div class="skill">Management Information Systems (MIS)</div>
+        </div>
+        
+        <p>I've mastered several programming languages and technologies through:</p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">2022-2025</div>
+                    <h3>Academic Learning</h3>
+                    <p>Completed BCA from  SUPREME INSTITUTE OF MANAGEMWENT AND TECHNOLOGY (MANKUNDU)</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Various</div>
+                    <h3>Workshops Attended</h3>
+                    <p>Participated in 40 hours work shop about HTML,CSS.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Internships</div>
+                    <h3>Practical Experience</h3>
+                    <p>Had 4 months intership at TOPSTACK(HOOGHLY) .Learned MERN STACK web development</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="timeline-date">Projects</div>
+                    <h3>Hands-on Implementation</h3>
+                    <p>USING HTML css
+                       Task manager,expense tracker,Restaurant website</p>
+                       
+                       <p>DATA ANALYSIS
+                       Analyzed data using Python and Excel, POWER BI focusing on real-world datasets to extract insights.</p>
+                    </p>
+                </div>
+
+        </div>
+
+    </div>
+            <p>My journey has equipped me with problem-solving skills, technical expertise, and the ability to adapt to new technologies quickly.</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fade-in effect
+            document.body.style.opacity = '1';
+            document.body.style.transform = 'translateY(0)';
+            
+            // Typewriter effect for the first paragraph
+            const introText = "Hello! I'm a BCA graduate (2025) with a strong foundation in multiple technical domains.";
+            const introElement = document.querySelector('p:first-of-type');
+            let i = 0;
+            
+            introElement.textContent = '';
+            
+            function typeWriter() {
+                if (i < introText.length) {
+                    introElement.textContent += introText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            setTimeout(typeWriter, 1000);
+            
+            // Skill animation
+            const skills = document.querySelectorAll('.skill');
+            skills.forEach((skill, index) => {
+                setTimeout(() => {
+                    skill.style.transform = 'scale(1.1)';
+                    skill.style.transition = 'transform 0.3s';
+                    setTimeout(() => {
+                        skill.style.transform = 'scale(1)';
+                    }, 300);
+                }, 1500 + (index * 200));
+            });
+            
+            // Timeline item animation
+            const timelineItems = document.querySelectorAll('.timeline-content');
+            timelineItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, 2000 + (index * 300));
+            });
+        });
+    </script>
+</body>
+</html>

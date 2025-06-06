@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        /* Body styles: Black background, white text, full height, centered content */
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font as per guidelines */
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Hide scrollbars if content is within viewport */
+            position: relative; /* Needed for absolute positioning of background circles */
+        }
+
+        /* Container for the main contact options */
+        .container {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 12px; /* Rounded corners for the container */
+            background: rgba(255, 255, 255, 0.08); /* Slightly transparent white for a clean look */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+            position: relative;
+            z-index: 1; /* Ensure container is above background effects */
+        }
+
+        /* Heading style */
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 35px;
+            color: white; /* Normal white text for heading */
+        }
+
+        /* Styles for the contact options section */
+        .contact-options {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Space between buttons */
+            margin-top: 30px;
+        }
+
+        /* General button styles */
+        .contact-button {
+            background-color: rgba(255, 255, 255, 0.15); /* Slightly darker transparent white for buttons */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px; /* Rounded corners for buttons */
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none; /* Remove underline for links */
+        }
+
+        /* Hover effects for buttons */
+        .contact-button:hover {
+            background-color: rgba(255, 255, 255, 0.25); /* Lighten background on hover */
+            transform: translateY(-3px); /* Slight lift effect */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+
+        /* Image styles within buttons */
+        .contact-button img {
+            width: 28px; /* Size of logos */
+            height: 28px;
+            margin-right: 15px;
+            filter: none; /* Ensure logos are shown in their original colors */
+        }
+
+        /* Background animated circles (effects for the rest of the page) */
+        .circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0; /* Ensure circles are behind the main content */
+        }
+
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(120, 200, 255, 0.1); /* Subtle blue circles for effect */
+            animation: animate 25s linear infinite;
+            bottom: -150px; /* Start below the viewport */
+            border-radius: 50%; /* Make them perfectly round */
+        }
+
+        /* Individual circle sizes, positions, and animation delays */
+        .circles li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+        .circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+        .circles li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+        .circles li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+        .circles li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+        .circles li:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
+        .circles li:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
+        .circles li:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+        .circles li:nth-child(9) { left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+        .circles li:nth-child(10) { left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s; }
+
+        /* Keyframe animation for circles */
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background animated circles for visual effect -->
+    <div class="circles">
+        <li></li><li></li><li></li><li></li><li></li>
+        <li></li><li></li><li></li><li></li><li></li>
+    </div>
+
+    <!-- Main contact container -->
+    <div class="container">
+        <h1>Contact With Me</h1>
+        <div class="contact-options">
+            <!-- WhatsApp Link -->
+            <a href="https://wa.me/6291115792" target="_blank" class="contact-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" alt="WhatsApp Logo">
+                Chat on WhatsApp
+            </a>
+            <!-- Email Link -->
+            <a href="mailto:YOUR_EMAIL_ADDRESS" class="contact-button">
+                <img src="gmail.png">
+                Send an Email
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // No custom JavaScript is needed for these functionalities, as they are handled directly
+        // by the HTML 'href' attributes ('https://wa.me/' for WhatsApp and 'mailto:' for email).
+        // The 'target="_blank"' attribute ensures the WhatsApp link opens in a new tab.
+    </script>
+</body>
+</html>

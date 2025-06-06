@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        * {
+            margin: 0ch;
+            padding: 0ch;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color:black;
+            color: aliceblue;
+
+            nav {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 80px;
+                background-color: yellowgreen;
+                font-family: 'Poppins', sans-serif;
+                ;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+
+            }
+
+            nav ul li {
+                list-style: none;
+                margin: 0 23px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+
+            }
+
+            nav ul li a:hover {
+                color: black;
+                font size: 1.4rem;
+            }
+
+            main hr{border: o;
+            background: red;
+        height: 1.2px;
+            margin: 60px 84px;
+            }
+        }
+
+
+
+        .left {
+            font-size: 1.5rem;
+
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+            align-items: center;
+
+
+
+        }
+
+        .firstsection >div {
+            width: 30%;
+
+        }
+        
+
+        .leftsection {
+            font-size: 3rem;
+
+            margin: 30px 0;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+
+        .rightsection img {
+            width: 80%;
+
+        }
+
+        .purple {
+            color: pink;
+        }
+        #element {
+            color: yellow;
+            
+            font-family: 'Poppins', sans-serif;
+        }
+        .secondsection {
+            max-width: 80vw;
+            margin:auto;
+            font-family: 'Poppins', sans-serif;
+        }
+        .secondsection h1 {
+            font-size: 3rem;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .text-purple {
+            color: purple;
+        }
+        .secondsection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+           
+        }
+    
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="left">Samrat's portfolio</div>
+            <div class="right">
+                <ul>
+                    <a href="">
+                        <li> ME
+                    </a></li>
+                    <a href="about.html.html">
+                        
+                    <li>About</a></li>
+                    <a href="project.html">
+                        <li>Project
+                    </a></li>
+                    <a href="contact.html">
+                        <li>Contact
+                    </a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+
+            <div class="leftsection">Hi my name is <span class="purple">samrat</span>
+                
+                  <span id="element"></span>
+            </div>
+            <div class="rightsection"><img src="bg.png"> </div>
+        </section>
+
+<hr>
+        <section class="secondsection">
+          
+            <h1>Aboute me </h1>
+             
+            
+            I am a BCA graduate. I am a web developer and data analyst. I have done many projects in web development and data analysis. I am a quick learner and I am always ready to learn new things. I am a team player and I can work under pressure. I am a good communicator and I can work with people from different backgrounds.
+click the project button for my projects
+willing to work with you. Thaking you. 
+            <div class="box">
+               <div class="vertical"></div> 
+               <div class="vertical"></div>
+               <div class="vertical"></div>
+
+            </div>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['I am a web devloper', 'Data analyst.'],
+      typeSpeed: 50,
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>
